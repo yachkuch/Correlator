@@ -11,7 +11,7 @@ from array import *
 import pathlib
 from pathlib import Path
 
-# Глобальные переменные
+# пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 def append_point(Pointsarr , mass ):
     if len(Pointsarr) == 3:
@@ -27,15 +27,19 @@ def append_point(Pointsarr , mass ):
         print("Ecxept \n")
     return mass  
     
-def make_plot(first_fubction, second_function , i = 0 , modulationType=NULL):
+def make_plot(first_fubction, second_function , i = 0 , modulationType=str()):
+    modList = modulationType.split('\\')
+    print(modList[0])
+    modulationType = str()
+    modulationType = modList[0]
     #plt.figure(i)
-    plt.figure('АКФ')
-    stri = "Корреляционная функция "
+    plt.figure('пїЅпїЅпїЅ')
+    stri = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ "
     stri+=str(i)
     stri+=" "
     stri+=str(modulationType)
     plt.title(stri)
-    stri+=".png"
+    #stri+=".png"
     result = list()
     KFK = np.correlate(first_fubction[1],second_function[1],mode = 'full')
     NormalizeVal = list()
@@ -51,18 +55,23 @@ def make_plot(first_fubction, second_function , i = 0 , modulationType=NULL):
     plt.plot(result)
     maxval = max(result)
     plt.scatter(len(result)/2-1,maxval)
-    maxvalstr = 'Коэффициент корреляции '
+    maxvalstr = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ '
     maxvalstr+=str(maxval)
-    plt.text(0., 0.9,maxvalstr , fontsize=8,
- # выравнивание по вертикали и по горизонтали
+    plt.text(16, 0.9,maxvalstr , fontsize=8,
+ # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     horizontalalignment='center', verticalalignment='center',
     bbox=dict(facecolor='pink', alpha=1.0))
-    plt.xlabel("Частота")
+    plt.xlabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
     plt.ylabel("")
     plt.grid()
     dir_path = pathlib.Path.cwd()
-    path = Path(dir_path,'results','stri')
-    plt.savefig(path)
+    print(stri)
+    path = Path(dir_path,'results')
+    pathsave = str(path)
+    pathsave+='\\'
+    pathsave+=(stri)
+    print(pathsave)
+    plt.savefig(pathsave.rstrip())
     plt.show()
     
 
