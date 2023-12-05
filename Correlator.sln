@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Correlator", "Correlator.pyproj", "{4234F9B7-D0CA-45E6-BDD9-3CCBECDB308E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4234F9B7-D0CA-45E6-BDD9-3CCBECDB308E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4234F9B7-D0CA-45E6-BDD9-3CCBECDB308E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8616EDE2-29ED-4877-95B0-80D67F1A5A0E}
+	EndGlobalSection
+EndGlobal
